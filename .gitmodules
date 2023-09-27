@@ -1,0 +1,3 @@
+[submodule "extern/loglib"]
+	path = extern/loglib
+	url = https://github.com/0xfadead/loglib
