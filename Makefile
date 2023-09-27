@@ -16,8 +16,9 @@ COMPILE_FLAG_OUT ?= compile_flags.txt
 	@$(CC) -c $< -o $@ $(WFLAGS) $(CFLAGS)
 
 $(OUT): $(OBJS)
-	@$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -s
+	mkdir -p build
 	@echo "Linking $(OBJS) -> $(OUT)"
+	@$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -s
 
 debug: $(OBJS)
 	$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -g3
