@@ -1,5 +1,5 @@
 OBJS += src/main.o src/arghandle.o src/imgopen.o src/imgprocessing.o
-OUT ?= build/main
+OUT ?= build/i2a
 
 CC ?= cc
 CCLD ?= cc
