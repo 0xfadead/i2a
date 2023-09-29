@@ -63,6 +63,8 @@ int main(int ac, const char *av[]) {
     log_fatal("Couldn't allocate memory for resized image: %s",
               strerror(errno));
 
+    free(in_file_img);
+
     return 7;
   }
 
@@ -71,6 +73,9 @@ int main(int ac, const char *av[]) {
 
   if (!res) {
     log_fatal("Couldn't resize input image!");
+
+    free(resized_img.img_data);
+    free(in_file_img);
 
     return 8;
   }
@@ -82,10 +87,14 @@ int main(int ac, const char *av[]) {
   /* Convert image to black and white */
   log_soft_progress("Converting image to black and white...");
   log_soft_info("Using %i characters.", chars_len);
+
   struct Image outimg = {0};
   res = convert_to_bw(&resized_img, &outimg, ll_verbosity, chars_len);
-  if (res != 0)
+  if (res != 0) {
+    free(resized_img.img_data);
+
     return res;
+  }
 
   log_soft_info("Freeing resized image...");
   free(resized_img.img_data);
