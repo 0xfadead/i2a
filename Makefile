@@ -21,7 +21,9 @@ $(OUT): $(OBJS)
 	@$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -s
 
 debug: $(OBJS)
-	$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -g3
+	mkdir -p build
+	@echo "Linking $(OBJS) -> $(OUT) (with debug info)"
+	@$(CCLD) $(OBJS) -o $(OUT) $(LFLAGS) -g3
 
 .PHONY: clean gen_compile_flags
 
