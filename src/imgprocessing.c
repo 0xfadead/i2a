@@ -5,7 +5,7 @@
 
 #define SHOW_COLOR
 #define SHOW_TIMESTAMP
-#include <llib.h>
+#include <loglib/llib.h>
 
 int convert_to_bw(const struct Image *src, struct Image *dst, int verbosity,
                   unsigned char char_len) {

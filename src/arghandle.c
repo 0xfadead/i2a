@@ -1,7 +1,7 @@
 #include "arghandle.h"
 #define SHOW_COLOR
 #define SHOW_TIMESTAMP
-#include <llib.h>
+#include <loglib/llib.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

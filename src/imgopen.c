@@ -2,7 +2,7 @@
 #include "imgopen.h"
 #define SHOW_COLOR
 #define SHOW_TIMESTAMP
-#include <llib.h>
+#include <loglib/llib.h>
 #include <stb/stb_image.h>
 
 unsigned char *load_image(const char *img_path, int *imgw, int *imgh, int *imgc,

@@ -1,6 +1,6 @@
 #define SHOW_COLOR
 #define SHOW_TIMESTAMP
-#include <llib.h>
+#include <loglib/llib.h>
 
 #define STB_IMAGE_RESIZE_IMPLEMENTATION
 #include <stb/stb_image_resize.h>

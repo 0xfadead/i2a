@@ -4,7 +4,7 @@ OUT ?= build/i2a
 CC ?= cc
 CCLD ?= cc
 WFLAGS += -Wall -Wextra -Wpedantic -Werror
-CFLAGS += -O2 -Iextern/loglib/ -g3
+CFLAGS += -O2 -Iextern/ -g3
 LFLAGS += -lm
 
 COMPILE_FLAG_OUT ?= compile_flags.txt
