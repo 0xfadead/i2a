@@ -31,7 +31,7 @@ int convert_to_bw(const struct Image *src, struct Image *dst, int verbosity,
       dst->img_data[i] +=
           src->img_data[(i * src->channels) + c] / src->channels;
     }
-    dst->img_data[i] /= (256 / char_len);
+    dst->img_data[i] /= (255.0 / char_len);
 
     if (dst->img_data[i] >= char_len) {
       log_soft_error("error at x=%04i y=%04i: %i >= %i", (int)(i % src->width),
