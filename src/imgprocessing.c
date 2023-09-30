@@ -41,7 +41,7 @@ int convert_to_bw(const struct Image *src, struct Image *dst, int verbosity,
     }
   }
 
-  log_info("Errors: %lu", errors);
+  log_soft_info("Errors: %lu", errors);
 
   return 0;
 }
